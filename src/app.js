@@ -15,5 +15,8 @@ app.get("/", (req, res) => {
     </ul>
   `);
 });
+const ingredientRoutes = require("./routes/ingredientRoutes");
+
+app.use("/api/ingredients", ingredientRoutes);
 
 module.exports = app;
