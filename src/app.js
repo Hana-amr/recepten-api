@@ -26,6 +26,8 @@ app.get("/", (req, res) => {
       <li>POST /api/recipes</li>
       <li>PUT /api/recipes/:id</li>
       <li>DELETE /api/recipes/:id</li>
+      <li>GET /api/ingredients?limit=5&offset=0</li>
+      <li>GET /api/ingredients?search=tom</li>
     </ul>
   `);
 });

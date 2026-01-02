@@ -5,8 +5,15 @@ exports.getIngredients = async (req, res) => {
     try {
         const limit = parseInt(req.query.limit) || 10;
         const offset = parseInt(req.query.offset) || 0;
+        const search = req.query.search;
 
-        const ingredients = await Ingredient.find()
+        let query = {};
+
+        if (search) {
+            query.name = { $regex: search, $options: "i" };
+        }
+
+        const ingredients = await Ingredient.find(query)
             .skip(offset)
             .limit(limit);
 
@@ -15,6 +22,7 @@ exports.getIngredients = async (req, res) => {
         res.status(500).json({ message: error.message });
     }
 };
+
 
 // GET single ingredient
 exports.getIngredientById = async (req, res) => {
