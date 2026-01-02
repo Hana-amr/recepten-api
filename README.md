@@ -54,11 +54,18 @@ Recepten kunnen meerdere ingrediënten bevatten via MongoDB ObjectId-relaties.
 
 ## Extra features
 
-- Relatie tussen recepten en ingrediënten (populate)
-- Zoeken op ingredientnaam 
-- Limit & offset voor paginatie 
-- Automatische timestamps (createdAt, updatedAt)
-- Frontend toegevoegd 
+- **Relatie tussen recepten en ingrediënten (populate)**
+  Recepten bevatten meerdere ingrediënten via MongoDB ObjectId-relaties.  
+  Met `populate` worden de volledige ingredient-gegevens automatisch opgehaald.
+- **Zoeken**
+  Ingrediënten kunnen gefilterd worden op naam via een search query parameter.
+- **Limit & offset voor paginatie**
+  Resultaten kunnen in delen worden opgehaald met behulp van limit en offset.
+- **Automatische timestamps**
+  Elk document bevat automatisch `createdAt` en `updatedAt` velden.
+- **Frontend demonstratie**
+  Een eenvoudige HTML-pagina (`/recipes.html`) toont hoe de API gebruikt wordt om recepten op te halen, te zoeken en details te bekijken.
+
 
 
 ## Bronnen 
