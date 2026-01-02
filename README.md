@@ -16,7 +16,7 @@ De API laat toe om recepten en ingrediënten te beheren via CRUD-operaties.
 1. Repository clonen
 - git clone https://github.com/Hana-amr/recepten-api.git
 - cd recepten-api
-- 
+
 2. Dependencies installeren 
 - npm install
 
@@ -58,6 +58,7 @@ Recepten kunnen meerdere ingrediënten bevatten via MongoDB ObjectId-relaties.
 - Zoeken op ingredientnaam 
 - Limit & offset voor paginatie 
 - Automatische timestamps (createdAt, updatedAt)
+- Frontend toegevoegd 
 
 
 ## Bronnen 

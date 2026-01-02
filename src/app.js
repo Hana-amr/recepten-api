@@ -32,6 +32,8 @@ app.get("/", (req, res) => {
   `);
 });
 
+app.use(express.static("public"));
+
 const ingredientRoutes = require("./routes/ingredientRoutes");
 app.use("/api/ingredients", ingredientRoutes);
 
